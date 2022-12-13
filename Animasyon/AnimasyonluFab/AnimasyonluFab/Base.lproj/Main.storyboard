@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nNQ-xz-ija">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="de6-m1-OXy">
+            <objects>
+                <viewController id="nNQ-xz-ija" customClass="ViewController" customModule="AnimasyonluFAB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nDk-pp-EPx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loy-hm-0zu">
+                                <rect key="frame" x="285" y="720" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="bU4-rM-Jgp"/>
+                                    <constraint firstAttribute="height" constant="60" id="wOu-qK-1XR"/>
+                                </constraints>
+                                <state key="normal" image="fabMain"/>
+                                <connections>
+                                    <action selector="fabMainTikla:" destination="nNQ-xz-ija" eventType="touchUpInside" id="ON5-7S-OkH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPE-nt-cj3">
+                                <rect key="frame" x="285" y="630" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9Uf-3a-L5K"/>
+                                    <constraint firstAttribute="width" constant="60" id="EWY-IX-p4V"/>
+                                </constraints>
+                                <state key="normal" image="fabBirinci"/>
+                                <connections>
+                                    <action selector="fabBirinciTikla:" destination="nNQ-xz-ija" eventType="touchUpInside" id="RER-bn-jIW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QH-Ar-Ima">
+                                <rect key="frame" x="285" y="540" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7ay-dP-lwt"/>
+                                    <constraint firstAttribute="width" constant="60" id="Gfu-SX-Xvm"/>
+                                </constraints>
+                                <state key="normal" image="fabIkinci"/>
+                                <connections>
+                                    <action selector="fabIkinciTikla:" destination="nNQ-xz-ija" eventType="touchUpInside" id="kbb-Wz-I7p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qs1-vo-C9v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qs1-vo-C9v" firstAttribute="bottom" secondItem="loy-hm-0zu" secondAttribute="bottom" constant="30" id="3ID-FS-lIw"/>
+                            <constraint firstItem="qs1-vo-C9v" firstAttribute="trailing" secondItem="loy-hm-0zu" secondAttribute="trailing" constant="45" id="F1u-OS-OPh"/>
+                            <constraint firstItem="loy-hm-0zu" firstAttribute="top" secondItem="lPE-nt-cj3" secondAttribute="bottom" constant="30" id="Laz-8J-Rr3"/>
+                            <constraint firstItem="qs1-vo-C9v" firstAttribute="trailing" secondItem="4QH-Ar-Ima" secondAttribute="trailing" constant="45" id="amh-KX-QtP"/>
+                            <constraint firstItem="qs1-vo-C9v" firstAttribute="trailing" secondItem="lPE-nt-cj3" secondAttribute="trailing" constant="45" id="hCW-pj-Kpz"/>
+                            <constraint firstItem="lPE-nt-cj3" firstAttribute="top" secondItem="4QH-Ar-Ima" secondAttribute="bottom" constant="30" id="rc7-9D-YLZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fabBirinci" destination="lPE-nt-cj3" id="1aK-EM-VKs"/>
+                        <outlet property="fabIkinci" destination="4QH-Ar-Ima" id="Lh0-vD-HhZ"/>
+                        <outlet property="fabMain" destination="loy-hm-0zu" id="2W8-8v-nsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWw-4h-UId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fabBirinci" width="36" height="36"/>
+        <image name="fabIkinci" width="36" height="36"/>
+        <image name="fabMain" width="36" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
